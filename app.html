@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Робоча сторінка додатку</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">LiveCalculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Головна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Профіль</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Про додаток</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="app.html">Додаток</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Калькулятор</h2>
+        <div class="btn-group mb-3" role="group">
+            <button type="button" class="btn btn-secondary" id="standardMode">Звичайний</button>
+            <button style="margin-left: 15px;" type="button" class="btn btn-secondary" id="programmerMode">Режим для програміста</button>
+        </div>
+        <div id="calculator" class="calculator">
+            <input type="text" class="form-control mb-3" id="display" readonly>
+            <div class="btn-group" role="group">
+                <button class="btn btn-light" onclick="appendNumber(7)">7</button>
+                <button class="btn btn-light" onclick="appendNumber(8)">8</button>
+                <button class="btn btn-light" onclick="appendNumber(9)">9</button>
+                <button class="btn btn-warning" onclick="setOperation('+')">+</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button class="btn btn-light" onclick="appendNumber(4)">4</button>
+                <button class="btn btn-light" onclick="appendNumber(5)">5</button>
+                <button class="btn btn-light" onclick="appendNumber(6)">6</button>
+                <button class="btn btn-warning" onclick="setOperation('-')">-</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button class="btn btn-light" onclick="appendNumber(1)">1</button>
+                <button class="btn btn-light" onclick="appendNumber(2)">2</button>
+                <button class="btn btn-light" onclick="appendNumber(3)">3</button>
+                <button class="btn btn-warning" onclick="setOperation('*')">*</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button class="btn btn-light" onclick="appendNumber(0)">0</button>
+                <button class="btn btn-light" onclick="appendNumber('.')">.</button>
+                <button class="btn btn-danger" onclick="clearDisplay()">C</button>
+                <button class="btn btn-success" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
